@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://arobot.github.io">
+  <title>Vim操作指南 | 罗威的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言能够查看官方文档的，请以官方文档为准。终端中使用1$ vimtutor
+即可阅读官方教程，本文所有内容全部来自该教程，方便我不时阅读巩固。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vim操作指南">
+<meta property="og:url" content="http://arobot.github.io/2016/12/05/Vim-operation/index.html">
+<meta property="og:site_name" content="罗威的博客">
+<meta property="og:description" content="前言能够查看官方文档的，请以官方文档为准。终端中使用1$ vimtutor
+即可阅读官方教程，本文所有内容全部来自该教程，方便我不时阅读巩固。">
+<meta property="og:updated_time" content="2016-12-05T10:37:40.076Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vim操作指南">
+<meta name="twitter:description" content="前言能够查看官方文档的，请以官方文档为准。终端中使用1$ vimtutor
+即可阅读官方教程，本文所有内容全部来自该教程，方便我不时阅读巩固。">
+  
+    <link rel="alternative" href="/atom.xml" title="罗威的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://raw.githubusercontent.com/arobot/Blog/master/asserts/lolipop.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="https://raw.githubusercontent.com/arobot/Blog/master/asserts/avatar.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">罗威</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">间歇性神经失常</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="http://github.com/arobot" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="http://zhihu.com/people/arobot" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">罗威</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="https://raw.githubusercontent.com/arobot/Blog/master/asserts/avatar.png" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">罗威</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">间歇性神经失常</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="http://github.com/arobot" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="http://zhihu.com/people/arobot" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-Vim-operation" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Vim操作指南
+    </h1>
+  
+
+        <a href="/2016/12/05/Vim-operation/" class="archive-article-date">
+  	<time datetime="2016-12-05T02:10:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-05</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>能够查看官方文档的，请以官方文档为准。<br>终端中使用<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vimtutor</div></pre></td></tr></table></figure></p>
+<p>即可阅读官方教程，本文所有内容全部来自该教程，方便我不时阅读巩固。</p>
+<a id="more"></a>
+<h2 id="Vim光标移动、插入和退出"><a href="#Vim光标移动、插入和退出" class="headerlink" title="Vim光标移动、插入和退出"></a>Vim光标移动、插入和退出</h2><ol>
+<li>光标在屏幕文本中的移动既可以用箭头键，也可以使用 hjkl 字母键。<br> <code>h</code> (左移)       <code>j</code> (下行)       <code>k</code> (上行)     <code>l</code> (右移)</li>
+<li><p>欲进入 Vim 编辑器(从命令行提示符)，请输入 <code>vim 文件名</code> <code>&lt;回车&gt;</code></p>
+</li>
+<li><p>欲退出 Vim 编辑器    </p>
+<ul>
+<li>请输入 <esc>   <code>:q!</code>   <code>&lt;回车&gt;</code> 放弃所有改动。</esc></li>
+<li>或者输入 <esc>   <code>:wq</code>   <code>&lt;回车&gt;</code> 保存改动。</esc></li>
+</ul>
+</li>
+<li><p>在正常模式下删除光标所在位置的字符，请按 <code>x</code></p>
+</li>
+<li><p>欲插入或添加文本，请输入：</p>
+<ul>
+<li>i   输入欲插入文本   <esc>             在光标前插入文本</esc></li>
+<li>A   输入欲添加文本   <esc>             在一行后添加文本</esc></li>
+<li>a   输入欲插入文本   <esc>         在光标后插入文本</esc></li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>特别提示</strong>：按下 <esc> 键会带您回到正常模式或者撤消一个不想输入或部分完整<br>的命令。</esc></p>
+</blockquote>
+<h2 id="移动、删除类命令"><a href="#移动、删除类命令" class="headerlink" title="移动、删除类命令"></a>移动、删除类命令</h2><ol>
+<li>欲从当前光标删除至下一个单词，请输入 <code>dw</code></li>
+<li>欲从当前光标删除至当前行末尾，请输入 <code>d$</code></li>
+<li>欲删除整行，请输入 <code>dd</code></li>
+<li>欲重复一个动作，请在它前面加上一个数字 <code>2w</code></li>
+<li><p>在正常模式下修改命令的格式是：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">operator   [<span class="keyword">number</span>]   motion</div></pre></td></tr></table></figure>
+<p>其中：<br>   <code>operator</code> - 操作符，代表要做的事情，比如 d 代表删除<br>   <code>[number]</code> - 可以附加的数字，代表动作重复的次数<br>   <code>motion</code>   - 动作，代表在所操作的文本上的移动，例如 w 代表单词(word)，<br>   <code>$</code> - 代表行末等等。</p>
+</li>
+<li><p>欲移动光标到行首，请按数字0键 <code>0</code><br>欲往后移动一个word，请输入 <code>w</code><br>欲移动到当前单词最有一个字符处，请输入 <code>e</code></p>
+</li>
+<li><p>欲撤消以前的操作，请输入 <code>u</code> (小写的u)<br>欲撤消在一行中所做的改动，请输入 <code>U</code> (大写的U)<br>欲撤消以前的撤消命令，恢复以前的操作结果，请输入 <code>CTRL</code>+<code>R</code></p>
+</li>
+</ol>
+<h2 id="高级命令"><a href="#高级命令" class="headerlink" title="高级命令"></a>高级命令</h2><p>学习完上面的命令，基本上已经可以满足正常的编辑工作。下面的高级命令能够更高效的完成输入工作</p>
+<h3 id="置入类命令"><a href="#置入类命令" class="headerlink" title="置入类命令"></a>置入类命令</h3><p><code>p</code> 将上一次删除的内容置入光标之后 </p>
+<h3 id="替换类命令"><a href="#替换类命令" class="headerlink" title="替换类命令"></a>替换类命令</h3><p><code>r</code> 输入r和一个字符来替换光标所在位置的字符<br><code>R</code> 进入连续替换模式</p>
+<h3 id="更改类命令"><a href="#更改类命令" class="headerlink" title="更改类命令"></a>更改类命令</h3><p><code>ce</code> 更改文本从当前位置直到单词的末尾</p>
+<blockquote>
+<p><code>ce</code>在删除文本的同时，也会进入插入模式</p>
+</blockquote>
+<h3 id="定位命令"><a href="#定位命令" class="headerlink" title="定位命令"></a>定位命令</h3><p><code>G</code> 去到文件最后一行<br><code>gg</code> 去到文件第一行<br><code>Ctrl</code> + <code>g</code> 控制台最下面将显示当前的状态信息，以及光标所在的行号<br><code>line</code> + <code>g</code> 返回到指定的行号</p>
+<h3 id="搜索类命令"><a href="#搜索类命令" class="headerlink" title="搜索类命令"></a>搜索类命令</h3><p><code>/</code> + <code>words</code> 在当前文章中搜索该字符串<br><code>n</code> 继续往后搜索当前字符串<br><code>N</code> 往前搜索当前字符串<br><code>?</code> 直接往前搜索字符串<br><code>Ctrl</code> + <code>o</code> 回到上一个位置<br><code>Ctrl</code> + <code>i</code> 前进到较新的位置</p>
+<h3 id="括号的配对"><a href="#括号的配对" class="headerlink" title="括号的配对"></a>括号的配对</h3><p><code>%</code> 将光标移动到任意的<code>{[()]}</code>处，按下<code>%</code>光标会跳到成对的括号处</p>
+<h3 id="替换命令"><a href="#替换命令" class="headerlink" title="替换命令"></a>替换命令</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:s/old/<span class="keyword">new</span>/g</div></pre></td></tr></table></figure>
+<p>可以替换光标所在行的old为new<br>最后一个命令<code>g</code>表示替换该行所有的匹配项,使用<code>gc</code>表示找到当前行的所有匹配项目，并对每一个匹配项提示是否进行替换。</p>
+<p><strong>多行匹配</strong><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:#,#s/old/<span class="keyword">new</span>/g</div></pre></td></tr></table></figure></p>
+<p><code>#,#</code>代表的是替换操作的若干行中的首尾两行的行号。<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">:%s/old/<span class="keyword">new</span>/g</div><div class="line">:%s/old/<span class="keyword">new</span>/gc</div></pre></td></tr></table></figure></p>
+<h3 id="新增行"><a href="#新增行" class="headerlink" title="新增行"></a>新增行</h3><p><code>o</code> 将在光标所在行的下方增加一行并进入插入模式<br><code>O</code> 大写的’o’将在光标所在行的上方增加一行并进入插入模式</p>
+<h3 id="可视化选择命令"><a href="#可视化选择命令" class="headerlink" title="可视化选择命令"></a>可视化选择命令</h3><p><code>v</code> 进入选择模式，移动光标就可以选择你想要的文字</p>
+<h3 id="复制命令"><a href="#复制命令" class="headerlink" title="复制命令"></a>复制命令</h3><p><code>y</code> 使用该命令配合<code>v</code>命令，选择一段文字进行复制，然后移动光标到需要的地方<code>p</code>粘贴文本</p>
+<h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><h3 id="执行外部命令"><a href="#执行外部命令" class="headerlink" title="执行外部命令"></a>执行外部命令</h3><p>在Vim内部也可以执行外部的shell命令，只需要执行<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:!command</div></pre></td></tr></table></figure></p>
+<h3 id="补全功能"><a href="#补全功能" class="headerlink" title="补全功能"></a>补全功能</h3><p>在<code>:</code>模式下，输入一个字符<br>接着按下<code>Ctrl</code>+<code>D</code>,Vim会显示 以该字符开始的命令列表<br>然后按<code>TAB</code>键，Vim会补全命令 </p>
+<blockquote>
+<p>在输入的过程中，只需要不停的尝试<code>Ctrl</code>+<code>D</code>和<code>TAB</code>组合。</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-calendar"></i>
+	<a class="article-category-link" href="/categories/Tools/">Tools</a>
+	</div>
+
+
+      
+
+      
+        <div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode"></div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/12/04/add-Hexo-to-your-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">引入Hexo，美化你的博客（一）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Vim-operation" data-title="Vim操作指南" data-url="http://arobot.github.io/2016/12/05/Vim-operation/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"arobot"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 罗威
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/杂文/" style="font-size: 10px;">杂文</a>
+    			</div>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">拼尽了全力&lt;br&gt;才明白什么叫无能为力&lt;br&gt;&lt;br&gt;&lt;br&gt;被击倒在地&lt;br&gt;躺下的滋味是那样的舒爽&lt;br&gt;&lt;br&gt;&lt;br&gt;说到底&lt;br&gt;我仍在路上</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
