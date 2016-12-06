@@ -48,10 +48,10 @@ weixin:
 
 # Miscellaneous
 google_analytics: ''
-favicon: "https://raw.githubusercontent.com/arobot/Blog/master/asserts/lolipop.png"
+favicon: "/images/extras/lolipop.png"
 
 #你的头像url
-avatar: "https://raw.githubusercontent.com/arobot/Blog/master/asserts/avatar.png"
+avatar: "/images/extras/avatar.png"
 
 #是否开启分享
 share_jia: true
